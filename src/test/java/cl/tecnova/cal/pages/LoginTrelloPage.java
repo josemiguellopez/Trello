@@ -100,7 +100,8 @@ import cl.tecnova.cal.helpers.Helper;
 	
 	public void assertAgregarNuevaTarjetaValidacion() { //metodo para validar ingreso correcto      //#Paso 5 	
 	Assert.assertTrue(driver.findElement(validaicontarjeta).getText().equals("Añada una tarjeta"));
-//hola 2
+
+	//hola3
 	}
 	
 }
