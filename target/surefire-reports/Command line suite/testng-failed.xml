@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
+    <classes>
+      <class name="cl.tecnova.cal.tests.Test_Login_Trello_GC">
+        <methods>
+          <include name="IniciarSesionIncorrecto"/>
+          <include name="closeExtentReports"/>
+          <include name="configExtentReports"/>
+          <include name="afterMethod"/>
+          <include name="configSelenium"/>
+        </methods>
+      </class> <!-- cl.tecnova.cal.tests.Test_Login_Trello_GC -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="cl.tecnova.cal.tests.Test_Login_Trello_GC" duration-ms="240576" started-at="2019-08-14T18:46:19Z" finished-at="2019-08-14T18:50:20Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="240576" started-at="2019-08-14T18:46:19Z" finished-at="2019-08-14T18:50:20Z">
+      <class name="cl.tecnova.cal.tests.Test_Login_Trello_GC">
+        <test-method status="PASS" signature="configExtentReports()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configExtentReports" is-config="true" duration-ms="162" started-at="2019-08-14T18:46:19Z" finished-at="2019-08-14T18:46:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configExtentReports -->
+        <test-method status="PASS" signature="configSelenium()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configSelenium" is-config="true" duration-ms="5493" started-at="2019-08-14T18:46:19Z" finished-at="2019-08-14T18:46:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSelenium -->
+        <test-method status="PASS" signature="IniciarSesion()[pri:1, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="IniciarSesion" duration-ms="9026" started-at="2019-08-14T18:46:25Z" finished-at="2019-08-14T18:46:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IniciarSesion -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="afterMethod" is-config="true" duration-ms="157" started-at="2019-08-14T18:46:34Z" finished-at="2019-08-14T18:46:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IniciarSesion status=SUCCESS method=Test_Login_Trello_GC.IniciarSesion()[pri:1, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="configSelenium()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configSelenium" is-config="true" duration-ms="4340" started-at="2019-08-14T18:46:34Z" finished-at="2019-08-14T18:46:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSelenium -->
+        <test-method status="PASS" signature="IniciarSesionIncorrecto()[pri:1, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="IniciarSesionIncorrecto" duration-ms="3449" started-at="2019-08-14T18:46:38Z" finished-at="2019-08-14T18:46:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IniciarSesionIncorrecto -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="afterMethod" is-config="true" duration-ms="2203" started-at="2019-08-14T18:46:42Z" finished-at="2019-08-14T18:46:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IniciarSesionIncorrecto status=SUCCESS method=Test_Login_Trello_GC.IniciarSesionIncorrecto()[pri:1, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="configSelenium()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configSelenium" is-config="true" duration-ms="4165" started-at="2019-08-14T18:46:44Z" finished-at="2019-08-14T18:46:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSelenium -->
+        <test-method status="PASS" signature="CrearTabero()[pri:2, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="CrearTabero" duration-ms="21232" started-at="2019-08-14T18:46:48Z" finished-at="2019-08-14T18:47:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CrearTabero -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="afterMethod" is-config="true" duration-ms="129" started-at="2019-08-14T18:47:09Z" finished-at="2019-08-14T18:47:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CrearTabero status=SUCCESS method=Test_Login_Trello_GC.CrearTabero()[pri:2, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="configSelenium()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configSelenium" is-config="true" duration-ms="4523" started-at="2019-08-14T18:47:10Z" finished-at="2019-08-14T18:47:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSelenium -->
+        <test-method status="PASS" signature="AbrirTableroValidacion()[pri:3, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="AbrirTableroValidacion" duration-ms="18553" started-at="2019-08-14T18:47:14Z" finished-at="2019-08-14T18:47:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AbrirTableroValidacion -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="afterMethod" is-config="true" duration-ms="140" started-at="2019-08-14T18:47:33Z" finished-at="2019-08-14T18:47:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AbrirTableroValidacion status=SUCCESS method=Test_Login_Trello_GC.AbrirTableroValidacion()[pri:3, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="configSelenium()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configSelenium" is-config="true" duration-ms="4383" started-at="2019-08-14T18:47:33Z" finished-at="2019-08-14T18:47:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSelenium -->
+        <test-method status="PASS" signature="AgregarNuevaTarjeta()[pri:4, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="AgregarNuevaTarjeta" duration-ms="31126" started-at="2019-08-14T18:47:37Z" finished-at="2019-08-14T18:48:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AgregarNuevaTarjeta -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="afterMethod" is-config="true" duration-ms="80" started-at="2019-08-14T18:48:08Z" finished-at="2019-08-14T18:48:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AgregarNuevaTarjeta status=SUCCESS method=Test_Login_Trello_GC.AgregarNuevaTarjeta()[pri:4, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="configSelenium()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configSelenium" is-config="true" duration-ms="4776" started-at="2019-08-14T18:48:08Z" finished-at="2019-08-14T18:48:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSelenium -->
+        <test-method status="PASS" signature="AgregarNuevaTarjetaValidacion()[pri:4, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="AgregarNuevaTarjetaValidacion" duration-ms="17412" started-at="2019-08-14T18:48:13Z" finished-at="2019-08-14T18:48:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AgregarNuevaTarjetaValidacion -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="afterMethod" is-config="true" duration-ms="148" started-at="2019-08-14T18:48:31Z" finished-at="2019-08-14T18:48:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AgregarNuevaTarjetaValidacion status=SUCCESS method=Test_Login_Trello_GC.AgregarNuevaTarjetaValidacion()[pri:4, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="configSelenium()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configSelenium" is-config="true" duration-ms="4726" started-at="2019-08-14T18:48:31Z" finished-at="2019-08-14T18:48:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSelenium -->
+        <test-method status="PASS" signature="EditarListaDePrueba()[pri:5, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="EditarListaDePrueba" duration-ms="38271" started-at="2019-08-14T18:48:35Z" finished-at="2019-08-14T18:49:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditarListaDePrueba -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="afterMethod" is-config="true" duration-ms="110" started-at="2019-08-14T18:49:14Z" finished-at="2019-08-14T18:49:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EditarListaDePrueba status=SUCCESS method=Test_Login_Trello_GC.EditarListaDePrueba()[pri:5, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="configSelenium()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configSelenium" is-config="true" duration-ms="5351" started-at="2019-08-14T18:49:14Z" finished-at="2019-08-14T18:49:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSelenium -->
+        <test-method status="PASS" signature="MoverTarjeta()[pri:6, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="MoverTarjeta" duration-ms="29107" started-at="2019-08-14T18:49:19Z" finished-at="2019-08-14T18:49:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MoverTarjeta -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="afterMethod" is-config="true" duration-ms="93" started-at="2019-08-14T18:49:48Z" finished-at="2019-08-14T18:49:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MoverTarjeta status=SUCCESS method=Test_Login_Trello_GC.MoverTarjeta()[pri:6, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="configSelenium()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="configSelenium" is-config="true" duration-ms="5341" started-at="2019-08-14T18:49:48Z" finished-at="2019-08-14T18:49:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSelenium -->
+        <test-method status="PASS" signature="CerrarTablero()[pri:7, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="CerrarTablero" duration-ms="26146" started-at="2019-08-14T18:49:54Z" finished-at="2019-08-14T18:50:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CerrarTablero -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="afterMethod" is-config="true" duration-ms="81" started-at="2019-08-14T18:50:20Z" finished-at="2019-08-14T18:50:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CerrarTablero status=SUCCESS method=Test_Login_Trello_GC.CerrarTablero()[pri:7, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="closeExtentReports()[pri:0, instance:cl.tecnova.cal.tests.Test_Login_Trello_GC@548a9f61]" name="closeExtentReports" is-config="true" duration-ms="274" started-at="2019-08-14T18:50:20Z" finished-at="2019-08-14T18:50:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeExtentReports -->
+      </class> <!-- cl.tecnova.cal.tests.Test_Login_Trello_GC -->
+    </test> <!-- Command line test -->
+  </suite> <!-- cl.tecnova.cal.tests.Test_Login_Trello_GC -->
+</testng-results>
