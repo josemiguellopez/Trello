@@ -91,7 +91,7 @@ public class Test_Login_Trello_GC {
 			//Assert Validar Agregar Tarjeta
 			AgregarTarjeta.assertAgregarNuevaTarjetaValidacion();
 			//Agregar Tarjeta Lista de Prueba
-			AgregarTarjeta.ListaPrueba(subDir);
+			AgregarTarjeta.AgregarTarjetaListaPrueba(subDir);
 			//Agregar Descripcion de Prueba Automatizada
 			AgregarTarjeta.AgregarTarjetaPruebaAutomatizada(subDir);
 			//Agregar Lista Proceso

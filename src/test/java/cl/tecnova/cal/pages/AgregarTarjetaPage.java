@@ -79,15 +79,7 @@ public class AgregarTarjetaPage {
 			
 			
 			//Metodo Para Agregar Tarjeta
-			/**
-			 * @deprecated Use {@link #ListaPrueba(String)} instead
-			 */
 			public void AgregarTarjetaListaPrueba(String subDir) {
-				ListaPrueba(subDir);
-			}
-
-			//Metodo Para Agregar Tarjeta
-			public void ListaPrueba(String subDir) {
 			Helper.waitSeconds(3);
 			driver.findElement(nombredelista).click();
 			Helper.waitSeconds(2);
