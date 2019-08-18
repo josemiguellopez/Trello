@@ -14,29 +14,30 @@ import cl.tecnova.cal.pages.*;
 
 public class Test_Login_Trello_GC {
 
-	private WebDriver driver;
-	private ExtentReports extent;
-	private ExtentTest test;
-	private static String SUBDIR = "Trello\\";
-	private static Boolean TAKE_SS = true;
+			private WebDriver driver;
+			private ExtentReports extent;
+			private ExtentTest test;
+			private static String SUBDIR = "Trello\\";
+			private static Boolean TAKE_SS = true;
 	
-	@BeforeSuite
-	public void configExtentReports() {
-		// ExtentReports config
-		this.extent = new ExtentReports("ExtentReports/Trello.html", true);
-	}
+			@BeforeSuite
+			public void configExtentReports() {
+			// ExtentReports config
+			this.extent = new ExtentReports("ExtentReports/Trello.html", true);
+			}
 
-	@BeforeMethod
-	public void configSelenium() {
-		// Selenium config
-		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability("Empresa", "Trello");
-		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.navigate().to("https://trello.com/login");
-	}
+			@BeforeMethod
+			public void configSelenium() {
+			// Selenium config
+			DesiredCapabilities caps = new DesiredCapabilities();
+			caps.setCapability("Empresa", "Trello");
+			System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
+			driver.navigate().to("https://trello.com/login");
+			}
+	
 			//Este Test es Para Iniciar Sesion Correctamente 
 			@Test(priority = 1) 	
 			public void IniciarSesion() { 
