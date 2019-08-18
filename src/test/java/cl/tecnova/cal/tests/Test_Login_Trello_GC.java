@@ -88,10 +88,12 @@ public class Test_Login_Trello_GC {
 			
 			//Accion Abrir Tablero
 			AgregarTarjeta.abrirTablero(subDir);
-			//Assert Agregar Tarjeta
+			//Assert Validar Agregar Tarjeta
 			AgregarTarjeta.assertAgregarNuevaTarjetaValidacion();
 			//Accion Agregar Tarjeta
-			AgregarTarjeta.AgregarTarjeta(subDir);			
+			AgregarTarjeta.AgregarTarjetaListaPrueba(subDir);
+			AgregarTarjeta.AgregarTarjetaPruebaAutomatizada(subDir);
+			AgregarTarjeta.AgregarTablaProceso(subDir);
 			login.CerrarSesion(subDir);
 			}
 			
