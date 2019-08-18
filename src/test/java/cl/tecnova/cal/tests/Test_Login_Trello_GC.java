@@ -50,7 +50,7 @@ public class Test_Login_Trello_GC {
 			}
 	
 			//Este Test es Para Iniciar Sesion Incorrecto
-			@Test(priority = 1) 	
+			@Test(priority = 2) 	
 			public void IniciarSesionIncorrecto() { 
 			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
 			test = extent.startTest("Login incorrecto en la aplicacion Trello","Caso de Prueba 2");
@@ -61,7 +61,7 @@ public class Test_Login_Trello_GC {
 			}
 
 			// Este Test Es Para Crear Nombre De Tablero
-			@Test(priority = 2) 
+			@Test(priority = 3) 
 			public void CrearTabero() { 
 			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
 			test = extent.startTest("Crear un nuevo tablero con su nombre","Caso de Prueba 3");
@@ -79,7 +79,7 @@ public class Test_Login_Trello_GC {
 
 
 			// Este Test Para Añadir nueva tarjeta en la lista de tareas
-			@Test(priority = 3) 	
+			@Test(priority = 4) 	
 			public void AgregarNuevaTarjeta() { 
 			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
 			test = extent.startTest("Agregar Nueva Tarjeta ","Caso de Prueba 4 ");
@@ -101,20 +101,7 @@ public class Test_Login_Trello_GC {
 			login.CerrarSesion(subDir);
 			}
 			
-//			//Este Test Para Para Validacion de Nueva Tarjeta
-//			@Test(priority = 4) 	
-//			public void AgregarNuevaTarjetaValidacion() { 
-//			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Assert de Tarjeta Agregada Correcto","Prueba De Tarjeta Agregada Correcto ");
-//			test.log(LogStatus.INFO,"Prueba De Tarjeta Agregada Correcto");		
-//			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
-//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-//			AbrirTableroPage AbrirTableroPage = new AbrirTableroPage(driver, test, TAKE_SS);
-//			AbrirTableroPage.abrirTablero(subDir);
-//			login.assertAgregarNuevaTarjetaValidacion();
-//			login.CerrarSesion(subDir);
-//			
-//			}
+
 //					
 //			// Este Test Para Validacion de Edicion Tablero Creado Correcto
 //			@Test(priority = 5) 	
