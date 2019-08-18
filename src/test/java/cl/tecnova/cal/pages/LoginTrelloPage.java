@@ -32,7 +32,6 @@ import cl.tecnova.cal.helpers.Helper;
 	
 
 	private By validacionloginincorecto;
-	private By validaicontarjeta;
 
 	
 	//CONSTRUCTOR= RECIBE TODAS LAS COSAS CON LA QUE VAMOS A INTERACTUAR ( SIEMPRE RECIBE DRIVER TEST Y FOTO PRUEVA)  //#Paso2 
@@ -54,7 +53,6 @@ import cl.tecnova.cal.helpers.Helper;
 	
 	//de aqui pa aca metemos las varibales que usamos para validar 
 	
-	this.validaicontarjeta = By.xpath("//span[@class='js-add-a-card'][contains(.,'Añada una tarjeta')]");
 
 	
 	}
@@ -78,19 +76,11 @@ import cl.tecnova.cal.helpers.Helper;
 		Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Cerrar Sesion", subDir, "Imagen03");
 	}
 	
-	public void assertLoginCorrecto() { //metodo para validar ingreso correcto      //#Paso 5 		
+	public void assertLoginCorrecto() { //metodo para validar ingreso correcto     	
 	Assert.assertTrue(driver.findElement(validacionlogin).getText().equals("Tableros personales"));
 	}
-	public void assertLoginiNCorrecto() { //metodo para validar ingreso clave incorrecto      //#Paso 5 		
+	public void assertLoginiNCorrecto() { //metodo para validar ingreso clave incorrecto      	
 	Assert.assertTrue(driver.findElement(validacionloginincorecto).getText().equals("Contraseña no válida"));
 	}
-	
-	
-	
-	public void assertAgregarNuevaTarjetaValidacion() { //metodo para validar ingreso correcto      //#Paso 5 	
-	Assert.assertTrue(driver.findElement(validaicontarjeta).getText().equals("Añada una tarjeta"));
-
-	//hola3
-	}
-	
+		
 }

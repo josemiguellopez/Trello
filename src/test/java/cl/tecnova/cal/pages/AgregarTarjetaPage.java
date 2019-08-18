@@ -5,6 +5,7 @@ package cl.tecnova.cal.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -33,6 +34,10 @@ public class AgregarTarjetaPage {
 			private By titulootratarjeta;
 			private By botonagregarotro;
 			
+			//Assert
+			private By validaicontarjeta;
+
+			
 	
 			public AgregarTarjetaPage(WebDriver driver, ExtentTest test, Boolean TAKE_SS) {
 				
@@ -55,6 +60,10 @@ public class AgregarTarjetaPage {
 			this.botonagregartarjeta = By.xpath("//input[@class='primary confirm mod-compact js-add-card']");				
 			this.titulootratarjeta = By.xpath("//input[@name='name']");
 			this.botonagregarotro = By.xpath("//input[@value='Añadir lista']");
+			
+			//Assert
+			this.validaicontarjeta = By.xpath("//input[contains(@placeholder,'Introduzca el título de la lista...')]");
+
 									
 			}	
 			
@@ -87,8 +96,9 @@ public class AgregarTarjetaPage {
 			Helper.waitSeconds(1);
 			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Agregar Tarjeta", subDir, "AgregarTarjeta");
 			Helper.waitSeconds(2);
-		}
+			}
 	
-	
-	
-}
+			public void assertAgregarNuevaTarjetaValidacion() { //metodo para validar agregar tarjeta 	
+			Assert.assertTrue(driver.findElement(validaicontarjeta).getText().equals("Introduzca el título de la lista..."));
+				}
+	}

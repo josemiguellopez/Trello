@@ -43,8 +43,6 @@ public class CrearTableroPage {
 	//Constructor_Assert
 	this.validaciontablerocreado = By.xpath("//span[contains(.,'Tablero de Jose de Prueba')]");
 
-	
-	
 	}
 	
 	//Metodos
@@ -60,17 +58,7 @@ public class CrearTableroPage {
 		Helper.waitSeconds(4);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public void assertCrearTableroValidacion() { //metodo para validar ingreso correcto      //#Paso 5 	
+		public void assertCrearTableroValidacion() { //metodo para validar ingreso correcto      //#Paso 5 	
 		Assert.assertTrue(driver.findElement(validaciontablerocreado).getText().equals("Tablero de Jose de Prueba"));
 
 		}
