@@ -62,7 +62,7 @@ public class AgregarTarjetaPage {
 			this.botonagregarotro = By.xpath("//input[@value='Añadir lista']");
 			
 			//Assert
-			this.validaicontarjeta = By.xpath("//input[contains(@placeholder,'Introduzca el título de la lista...')]");
+			this.validaicontarjeta = By.xpath("//span[contains(.,'Añada una lista')]");
 
 									
 			}	
@@ -99,6 +99,6 @@ public class AgregarTarjetaPage {
 			}
 	
 			public void assertAgregarNuevaTarjetaValidacion() { //metodo para validar agregar tarjeta 	
-			Assert.assertTrue(driver.findElement(validaicontarjeta).getText().equals("Introduzca el título de la lista..."));
+			Assert.assertTrue(driver.findElement(validaicontarjeta).getText().equals("Añada una lista"));
 				}
 	}
