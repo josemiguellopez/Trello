@@ -56,7 +56,7 @@ public class Test_Login_Trello_GC {
 			test = extent.startTest("Login incorrecto en la aplicación Trello","Caso de Prueba 2");
 			test.log(LogStatus.INFO,"Prueba Login Incorrecto");		
 			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
-			login.LoginUsuario("", "", subDir); 
+			login.LoginUsuario("LoginIncorrecto@CasodePrueba2.test", "LoginIncorrecto", subDir); 
 			login.assertLoginiNCorrecto();
 			}
 //
