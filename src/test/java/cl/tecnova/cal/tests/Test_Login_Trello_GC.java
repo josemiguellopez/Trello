@@ -98,17 +98,11 @@ public class Test_Login_Trello_GC {
 			test.log(LogStatus.INFO,"Prueba De Agregar Nueva Tarjeta Correcto");		
 			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
 			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-			
-			
-			
-			//AbrirTableroPage AbrirTableroPage = new AbrirTableroPage(driver, test, TAKE_SS);
-			//AbrirTableroPage.abrirTablero(subDir);
-			
-			
 			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);
 			
+			//Accion Abrir Tablero
 			AgregarTarjeta.abrirTablero(subDir);
-			
+			//Accion Agregar Tarjeta
 			AgregarTarjeta.AgregarTarjeta(subDir);			
 			login.CerrarSesion(subDir);
 			}
