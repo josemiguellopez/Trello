@@ -89,9 +89,6 @@ import cl.tecnova.cal.helpers.Helper;
 	public void assertLoginiNCorrecto() { //metodo para validar ingreso clave incorrecto      //#Paso 5 		
 	Assert.assertTrue(driver.findElement(validacionloginincorecto).getText().equals("Contraseña no válida"));
 	}
-	public void assertLoginCampoBlanco() { //metodo para validar ingreso en blanco      //#Paso 5 		
-	Assert.assertTrue(driver.findElement(campoenblanco).getText().equals("Falta el correo electrónico"));
-	}
 	
 	public void assertCrearTableroValidacion() { //metodo para validar ingreso correcto      //#Paso 5 	
 	Assert.assertTrue(driver.findElement(validaciontablerocreado).getText().equals("Tablero de Jose de Prueba"));
