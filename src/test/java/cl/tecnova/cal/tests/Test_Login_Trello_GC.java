@@ -60,22 +60,22 @@ public class Test_Login_Trello_GC {
 //			login.assertLoginiNCorrecto();
 //			}
 
-			// Este Test Es Para Crear Tablero
-			@Test(priority = 2) 
-			public void CrearTabero() { 
-			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-			test = extent.startTest("Crear Tablero ","Prueba De Crear Tablero");
-			test.log(LogStatus.INFO,"Prueba Tablero Correcto");		
-			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
-			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir);
-			login.assertLoginCorrecto();
-			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
-			CrearTablero.CrearTablero(subDir);
-			CrearTablero.assertCrearTableroValidacion();
-			login.CerrarSesion(subDir);
-			}
+			// Este Test Es Para Crear Nombre De Tablero
+//			@Test(priority = 2) 
+//			public void CrearTabero() { 
+//			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
+//			test = extent.startTest("Crear un nuevo tablero con su nombre","Caso de Prueba 3");
+//			test.log(LogStatus.INFO,"Prueba Tablero Correcto");		
+//			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
+//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir);
+//			login.assertLoginCorrecto();
+//			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
+//			CrearTablero.CrearTablero(subDir);
+//			CrearTablero.assertCrearTableroValidacion();				
+//			login.CerrarSesion(subDir);
+//			}
 //			
-//			//Este Test Para Abrir Tablero
+//			//Este Test Para Abrir Tablero    BORRAR al finalizar test
 //			@Test(priority = 3) 	
 //			public void AbrirTableroValidacion() { 
 //			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
@@ -90,21 +90,29 @@ public class Test_Login_Trello_GC {
 //
 //			}
 //
-//			// Este Test Para Añadir nueva tarjeta en la lista de tareas
-//			@Test(priority = 4) 	
-//			public void AgregarNuevaTarjeta() { 
-//			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Agregar Nueva Tarjeta ","Prueba De Agregar Nueva Tarjeta ");
-//			test.log(LogStatus.INFO,"Prueba De Agregar Nueva Tarjeta Correcto");		
-//			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
-//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-//			AbrirTableroPage AbrirTableroPage = new AbrirTableroPage(driver, test, TAKE_SS);
-//			AbrirTableroPage.abrirTablero(subDir);
-//			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);
-//			AgregarTarjeta.AgregarTarjeta(subDir);			
-//			login.CerrarSesion(subDir);
-//			
-//			}
+			// Este Test Para Añadir nueva tarjeta en la lista de tareas
+			@Test(priority = 4) 	
+			public void AgregarNuevaTarjeta() { 
+			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
+			test = extent.startTest("Agregar Nueva Tarjeta ","Prueba De Agregar Nueva Tarjeta ");
+			test.log(LogStatus.INFO,"Prueba De Agregar Nueva Tarjeta Correcto");		
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
+			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
+			
+			
+			
+			//AbrirTableroPage AbrirTableroPage = new AbrirTableroPage(driver, test, TAKE_SS);
+			//AbrirTableroPage.abrirTablero(subDir);
+			
+			
+			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);
+			
+			AgregarTarjeta.abrirTablero(subDir);
+			
+			AgregarTarjeta.AgregarTarjeta(subDir);			
+			login.CerrarSesion(subDir);
+			}
+			
 //			//Este Test Para Para Validacion de Nueva Tarjeta
 //			@Test(priority = 4) 	
 //			public void AgregarNuevaTarjetaValidacion() { 
