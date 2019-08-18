@@ -38,49 +38,51 @@ public class Test_Login_Trello_GC {
 		driver.navigate().to("https://trello.com/login");
 	}
 			//Este Test es Para Iniciar Sesion Correctamente 
-//			@Test(priority = 1) 	
-//			public void IniciarSesion() { 
-//			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Login correcto en la aplicacion de Trello","Caso de Prueba 1");
-//			test.log(LogStatus.INFO,"Prueba Login Correcto");		
-//			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
-//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-//			login.assertLoginCorrecto(); 
-//		    login.CerrarSesion(subDir);		
-//			}
-//	
-//			//Este Test es Para Iniciar Sesion Incorrecto
-//			@Test(priority = 1) 	
-//			public void IniciarSesionIncorrecto() { 
-//			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Login incorrecto en la aplicacion Trello","Caso de Prueba 2");
-//			test.log(LogStatus.INFO,"Prueba Login Incorrecto");		
-//			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
-//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "LoginIncorrecto", subDir); 
-//			login.assertLoginiNCorrecto();
-//			}
+			@Test(priority = 1) 	
+			public void IniciarSesion() { 
+			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
+			test = extent.startTest("Login correcto en la aplicacion Trello","Caso de Prueba 1");
+			test.log(LogStatus.INFO,"Prueba Login Correcto");		
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
+			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
+			login.assertLoginCorrecto(); 
+		    login.CerrarSesion(subDir);		
+			}
+	
+			//Este Test es Para Iniciar Sesion Incorrecto
+			@Test(priority = 1) 	
+			public void IniciarSesionIncorrecto() { 
+			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
+			test = extent.startTest("Login incorrecto en la aplicacion Trello","Caso de Prueba 2");
+			test.log(LogStatus.INFO,"Prueba Login Incorrecto");		
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
+			login.LoginUsuario("testing.qa.tecnova@gmail.com", "LoginIncorrecto", subDir); 
+			login.assertLoginiNCorrecto();
+			}
 
 			// Este Test Es Para Crear Nombre De Tablero
-//			@Test(priority = 2) 
-//			public void CrearTabero() { 
-//			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Crear un nuevo tablero con su nombre","Caso de Prueba 3");
-//			test.log(LogStatus.INFO,"Prueba Tablero Correcto");		
-//			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
-//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir);
-//			login.assertLoginCorrecto();
-//			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
-//			CrearTablero.CrearTablero(subDir);
-//			CrearTablero.assertCrearTableroValidacion();				
-//			login.CerrarSesion(subDir);
-//			}
+			@Test(priority = 2) 
+			public void CrearTabero() { 
+			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
+			test = extent.startTest("Crear un nuevo tablero con su nombre","Caso de Prueba 3");
+			test.log(LogStatus.INFO,"Prueba Tablero Correcto");		
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
+			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir);
+			login.assertLoginCorrecto();
+			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
+			//Crear Tablero
+			CrearTablero.CrearTablero(subDir);
+			//Assert Tablero Creado
+			CrearTablero.assertCrearTableroValidacion();				
+			login.CerrarSesion(subDir);
+			}
 
 
 			// Este Test Para Añadir nueva tarjeta en la lista de tareas
 			@Test(priority = 3) 	
 			public void AgregarNuevaTarjeta() { 
 			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-			test = extent.startTest("Agregar Nueva Tarjeta ","Prueba De Agregar Nueva Tarjeta ");
+			test = extent.startTest("Agregar Nueva Tarjeta ","Caso de Prueba 4 ");
 			test.log(LogStatus.INFO,"Prueba De Agregar Nueva Tarjeta Correcto");		
 			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
 			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
