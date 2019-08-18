@@ -43,9 +43,12 @@ public class Test_Login_Trello_GC {
 			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
 			test = extent.startTest("Login correcto en la aplicacion Trello","Caso de Prueba 1");
 			test.log(LogStatus.INFO,"Prueba Login Correcto");		
-			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 
+			//Inicio de Sesion
 			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
+			//Assert Inicio de Sesion Correcto
 			login.assertLoginCorrecto(); 
+			//Cerrar Sesion
 		    login.CerrarSesion(subDir);		
 			}
 	
@@ -55,8 +58,10 @@ public class Test_Login_Trello_GC {
 			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
 			test = extent.startTest("Login incorrecto en la aplicacion Trello","Caso de Prueba 2");
 			test.log(LogStatus.INFO,"Prueba Login Incorrecto");		
-			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 
+			//Inicio de Sesion Incorrecto
 			login.LoginUsuario("testing.qa.tecnova@gmail.com", "LoginIncorrecto", subDir); 
+			//Assert Inicio de  Sesion Incorrecto
 			login.assertLoginiNCorrecto();
 			}
 
@@ -66,17 +71,20 @@ public class Test_Login_Trello_GC {
 			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
 			test = extent.startTest("Crear un nuevo tablero con su nombre","Caso de Prueba 3");
 			test.log(LogStatus.INFO,"Prueba Tablero Correcto");		
-			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 
+			//Inicio de Sesion
 			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir);
+			//Assert Inicio de Sesion
 			login.assertLoginCorrecto();
+			//Crear Clase Tablero
 			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
 			//Crear Tablero
 			CrearTablero.CrearTablero(subDir);
 			//Assert Tablero Creado
-			CrearTablero.assertCrearTableroValidacion();				
+			CrearTablero.assertCrearTableroValidacion();
+			//Cerrar Sesion
 			login.CerrarSesion(subDir);
 			}
-
 
 			// Este Test Para Añadir nueva tarjeta en la lista de tareas
 			@Test(priority = 4) 	
@@ -84,10 +92,11 @@ public class Test_Login_Trello_GC {
 			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
 			test = extent.startTest("Agregar Nueva Tarjeta ","Caso de Prueba 4 ");
 			test.log(LogStatus.INFO,"Prueba De Agregar Nueva Tarjeta Correcto");		
-			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS);
+			//Iniciar Sesion
 			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);
-			
+			//Crear Clase Tarjeta
+			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);			
 			//Accion Abrir Tablero
 			AgregarTarjeta.abrirTablero(subDir);
 			//Assert Validar Agregar Tarjeta
@@ -98,6 +107,7 @@ public class Test_Login_Trello_GC {
 			AgregarTarjeta.AgregarTarjetaPruebaAutomatizada(subDir);
 			//Agregar Lista Proceso
 			AgregarTarjeta.AgregarTablaProceso(subDir);
+			//Cerrar Sesion
 			login.CerrarSesion(subDir);
 			}
 			
