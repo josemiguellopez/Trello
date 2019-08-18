@@ -74,22 +74,8 @@ public class Test_Login_Trello_GC {
 //			CrearTablero.assertCrearTableroValidacion();				
 //			login.CerrarSesion(subDir);
 //			}
-//			
-//			//Este Test Para Abrir Tablero    BORRAR al finalizar test
-//			@Test(priority = 3) 	
-//			public void AbrirTableroValidacion() { 
-//			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Assert de Tablero Creado ","Prueba Ingreso A Tablero Creado");
-//			test.log(LogStatus.INFO,"Prueba De Acceso a Tablero Creado Correcto");		
-//			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
-//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-//			AbrirTableroPage abrirTablero = new AbrirTableroPage(driver, test, TAKE_SS);
-//			abrirTablero.abrirTablero(subDir);
-//			login.assertCrearTableroValidacion();
-//			login.CerrarSesion(subDir);
-//
-//			}
-//
+
+
 			// Este Test Para Añadir nueva tarjeta en la lista de tareas
 			@Test(priority = 4) 	
 			public void AgregarNuevaTarjeta() { 
