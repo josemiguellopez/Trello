@@ -115,64 +115,77 @@ public class Test_Login_Trello_GC {
 
 				
 //			// Este Test Para Validacion de Edicion Tablero Creado Correcto
-			@Test(priority = 5) 	
-			public void EditarListaDePrueba() { 
-			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-			test = extent.startTest("Edicion Nueva Tarjeta Creado ","Prueba Edicion Nueva Tarjeta");
-			test.log(LogStatus.INFO,"Prueba De Edicion a Nueva Tarjeta Creado Correcto");		
-			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 
-			//Inicio de Sesion
-			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-			//Crear Clase Tarjeta
-			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);			
-			//Accion Abrir Tablero
-			AgregarTarjeta.abrirTablero(subDir);
-			//Crear Clase Editar Lista
-			EditarListaPage EditarLista = new EditarListaPage(driver, test, TAKE_SS);
-			//Ingreso a Tabla Prueba Automatizada
-			EditarLista.TarjetaPruebaAutomatizada(subDir);
-			//Agregar Descripcion
-			EditarLista.Descripcion(subDir);
-			//Agregar Eriqueta
-			EditarLista.Etiqueta(subDir);
-			//Agregar Vencimiento
-			EditarLista.Vencimiento(subDir);
-			//Agregar Archivo Adjunto
-			EditarLista.ArchivoAdjunto(subDir);
-			//Agregar Comentarios
-			EditarLista.Comentarios(subDir);
-			//Cerrar Sesion
-			login.CerrarSesion(subDir);
-		
-			}
-//			//Este Test Para Mover Tarjeta y Cerrar Sesion 
+//			@Test(priority = 5) 	
+//			public void EditarListaDePrueba() { 
+//			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
+//			test = extent.startTest("Editar Tarjeta ","Caso de Prueba 5");
+//			test.log(LogStatus.INFO,"Prueba De Edicion a Nueva Tarjeta Creado Correcto");		
+//			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 
+//			//Inicio de Sesion
+//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
+//			//Crear Clase Tarjeta
+//			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);			
+//			//Accion Abrir Tablero
+//			AgregarTarjeta.abrirTablero(subDir);
+//			//Crear Clase Editar Lista
+//			EditarListaPage EditarLista = new EditarListaPage(driver, test, TAKE_SS);
+//			//Ingreso a Tabla Prueba Automatizada
+//			EditarLista.TarjetaPruebaAutomatizada(subDir);
+//			//Agregar Descripcion
+//			EditarLista.Descripcion(subDir);
+//			//Agregar Eriqueta
+//			EditarLista.Etiqueta(subDir);
+//			//Agregar Vencimiento
+//			EditarLista.Vencimiento(subDir);
+//			//Agregar Archivo Adjunto
+//			EditarLista.ArchivoAdjunto(subDir);
+//			//Agregar Comentarios
+//			EditarLista.Comentarios(subDir);
+//			//Cerrar Sesion
+//			login.CerrarSesion(subDir);
+//					
+//			}
+			
+			//Este Test Para Mover Tarjeta y Cerrar Sesion 
 //			@Test(priority = 6) 	
 //			public void MoverTarjeta() { 
 //			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Mover Tarjeta Creado ","Prueba De Mover Tarjeta ");
+//			test = extent.startTest("Mover la tarjeta a la lista Proceso ","Caso de Prueba 6 ");
 //			test.log(LogStatus.INFO,"Prueba De Mover Tarjeta Creado Correcto");		
 //			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
 //			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-//			AbrirTableroPage AbrirTableroPage = new AbrirTableroPage(driver, test, TAKE_SS);
-//			AbrirTableroPage.abrirTablero(subDir);
-//			MoverTarjetaPage MoverTarjeta = new MoverTarjetaPage(driver, test, TAKE_SS);
-//			MoverTarjeta.MoverTarjeta(subDir);
+//			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);			
+//			//Accion Abrir Tablero
+//			AgregarTarjeta.abrirTablero(subDir);
+//			//Crear Clase Editar Lista
+//			EditarListaPage EditarLista = new EditarListaPage(driver, test, TAKE_SS);
+//			//Ingreso a Tabla Prueba Automatizada
+//			EditarLista.TarjetaPruebaAutomatizada(subDir);
+//			
+//			//Mover Tarjeta
+//			EditarLista.MoverTarjeta(subDir);
+//			//Cerrar Sesion
 //			login.CerrarSesion(subDir);
 //				}
-//			// Este Test Para Eliminar Tablero
-//			@Test(priority = 7) 	
-//			public void CerrarTablero() { 
-//			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Eliminar Tablero  Creado ","Prueba De Eliminar Tablero ");
-//			test.log(LogStatus.INFO,"Prueba De Eliminar Tarjeta Creado Correcto");		
-//			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
-//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-//			AbrirTableroPage AbrirTableroPage = new AbrirTableroPage(driver, test, TAKE_SS);
-//			AbrirTableroPage.abrirTablero(subDir);
-//			EliminarTableroPage EliminarTablero = new EliminarTableroPage(driver, test, TAKE_SS);
-//			EliminarTablero.EliminarTablero(subDir);
-//			login.CerrarSesion(subDir);
-//				}
+			// Este Test Para Eliminar Tablero
+			@Test(priority = 7) 	
+			public void CerrarTablero() { 
+			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
+			test = extent.startTest("Eliminar Tablero  Creado ","Prueba De Eliminar Tablero ");
+			test.log(LogStatus.INFO,"Prueba De Eliminar Tarjeta Creado Correcto");		
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 			
+			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
+			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);			
+			//Accion Abrir Tablero
+			AgregarTarjeta.abrirTablero(subDir);
+			
+			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
+			//Eliminar Tablero
+			CrearTablero.EliminarTablero(subDir);
+			
+			
+			login.CerrarSesion(subDir);
+				}
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {

@@ -5,6 +5,7 @@ package cl.tecnova.cal.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -38,7 +39,11 @@ public class EditarListaPage {
 		private By guardarprueba;
 		private By cerrar;
 
-
+//Agributos Para Mover Tarjeta
+		
+		private By mover;
+		private By botonmover;
+		
 		
 		
 		//Construcctor
@@ -48,7 +53,7 @@ public class EditarListaPage {
 					this.test = test;
 					this.TAKE_SS = TAKE_SS;
 					this.clickpruebaautomatizada = By.xpath("//*[@id=\"board\"]/div[1]/div/div[2]/a[1]");
-					this.clickdescripcion = By.xpath("//textarea[contains(@class,'field field-autosave js-description-draft description card-description')]");
+					this.clickdescripcion = By.xpath("//a[contains(.,'Añadir una descripción más detallada...')]");
 					this.descripcion = By.xpath("//textarea[@placeholder='Añadir una descripción más detallada...']");
 					this.etiqueta = By.xpath("//span[contains(.,'Etiquetas')]");
 					this.coloretiqueta = By.xpath("//span[@data-color='green']");
@@ -64,7 +69,8 @@ public class EditarListaPage {
 					this.guardarprueba = By.xpath("//input[contains(@class,'primary confirm mod-no-top-bottom-margin js-add-comment')]");
 					this.cerrar = By.xpath("//*[@id=\"chrome-container\"]/div[3]/div/div/a");
 
-					
+					this.mover = By.xpath("//span[contains(.,'Mover')]");
+					this.botonmover = By.xpath("//input[@class='primary wide js-submit']");
 					
 					
 					
@@ -80,6 +86,7 @@ public class EditarListaPage {
 
 					}
 		public void Descripcion(String subDir) {
+			Helper.waitSeconds(1);
 			driver.findElement(clickdescripcion).click();
 			Helper.waitSeconds(1);
 			driver.findElement(descripcion).sendKeys("Hola soy una descripcion automatizada");
@@ -104,7 +111,7 @@ public class EditarListaPage {
 			Helper.waitSeconds(1);
 			driver.findElement(campofecha).sendKeys("31/08/2019");
 			Helper.waitSeconds(1);
-			driver.findElement(campohora).sendKeys("12:55");
+			//driver.findElement(campohora).sendKeys("12:55");  Buscar Simular TAb
 			Helper.waitSeconds(1);
 			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Agregar Vencimiento", subDir, "AgregarVencimiento");
 
@@ -136,7 +143,21 @@ public class EditarListaPage {
 			
 		}
 
-	
+		public void MoverTarjeta(String subDir ){
+			Helper.waitSeconds(1);
+			driver.findElement(mover).click();
+			Helper.waitSeconds(2);
+			
+			Select selector = new Select(driver.findElement(By.xpath("//select[contains(@class,'js-select-list')]"))); // con esto seleccionamos los comboxbox
+			selector.selectByVisibleText("Proceso");// con esto seleccionamos los comboxbox
+			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Mover Tarjeta", subDir, "MoverTarjeta");		
+			Helper.waitSeconds(1);
+			driver.findElement(botonmover).click();
+			Helper.waitSeconds(3);
+			driver.findElement(cerrar).click();
+			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Tarjeta En Tabla Proceso", subDir, "MoverTarjetaProceso");		
+
+		}
 	
 	
 }
