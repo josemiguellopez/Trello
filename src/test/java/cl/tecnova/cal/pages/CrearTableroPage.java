@@ -25,7 +25,7 @@ public class CrearTableroPage {
 	private By agregartitulo;
 	private By creartablero;
 	
-	//Asserts
+	//Atributos_Asserts
 	private By validaciontablerocreado;
 
 	
@@ -39,12 +39,15 @@ public class CrearTableroPage {
 	this.clickcrearuntablero = By.xpath("//div[@class='board-tile mod-add']");
 	this.agregartitulo = By.xpath("//*[@id=\"chrome-container\"]/div[3]/div/div/div/form/div/div/div[1]/input");
 	this.creartablero = By.xpath("//*[@id=\"chrome-container\"]/div[3]/div/div/div/form/button");
+	
 	//Constructor_Assert
 	this.validaciontablerocreado = By.xpath("//span[contains(.,'Tablero de Jose de Prueba')]");
 
 	
 	
 	}
+	
+	//Metodos
 	public void CrearTablero(String subDir){
 		driver.findElement(clickcrearuntablero).click();
 		Helper.waitSeconds(1);
@@ -68,7 +71,7 @@ public class CrearTableroPage {
 	
 	
 	public void assertCrearTableroValidacion() { //metodo para validar ingreso correcto      //#Paso 5 	
-		Assert.assertTrue(driver.findElement(validaciontablerocreado).getText().equals("Tablero de Jose de Pruebaaaa"));
+		Assert.assertTrue(driver.findElement(validaciontablerocreado).getText().equals("Tablero de Jose de Prueba"));
 
 		}
 }
