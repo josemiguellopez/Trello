@@ -79,7 +79,15 @@ public class AgregarTarjetaPage {
 			
 			
 			//Metodo Para Agregar Tarjeta
+			/**
+			 * @deprecated Use {@link #ListaPrueba(String)} instead
+			 */
 			public void AgregarTarjetaListaPrueba(String subDir) {
+				ListaPrueba(subDir);
+			}
+
+			//Metodo Para Agregar Tarjeta
+			public void ListaPrueba(String subDir) {
 			Helper.waitSeconds(3);
 			driver.findElement(nombredelista).click();
 			Helper.waitSeconds(2);
@@ -95,17 +103,15 @@ public class AgregarTarjetaPage {
 			driver.findElement(titulodetarjeta).sendKeys("Prueba Automatizada");
 			Helper.waitSeconds(1);
 			driver.findElement(botonagregartarjeta).click();
-			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Agregar Tarjeta Sub-Lista Prueba Automatizada", subDir, "AgregarTarjetaListaPruebaAutomatizada");
-
+			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Agregar Tarjeta Prueba Automatizada", subDir, "AgregarTarjetaListaPruebaAutomatizada");
 			Helper.waitSeconds(2);
 			}
 			
 			public void AgregarTablaProceso(String subDir) {
 			driver.findElement(titulootratarjeta).sendKeys("Proceso");
-			driver.findElement(botonagregarotro).click();
-			
+			driver.findElement(botonagregarotro).click();			
 			Helper.waitSeconds(1);
-			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Agregar Tarjeta Proceso", subDir, "AgregarTarjeta Proceso");
+			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Agregar Lista Proceso", subDir, "AgregarTarjeta Proceso");
 			Helper.waitSeconds(2);
 			}
 	
