@@ -41,7 +41,7 @@ public class Test_Login_Trello_GC {
 			@Test(priority = 1) 	
 			public void IniciarSesion() { 
 			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-			test = extent.startTest("Caso de Prueba 1","Login correcto en la aplicación de Trello");
+			test = extent.startTest("Login correcto en la aplicacion de Trello","Caso de Prueba 1");
 			test.log(LogStatus.INFO,"Prueba Login Correcto");		
 			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
 			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
