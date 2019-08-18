@@ -38,27 +38,27 @@ public class Test_Login_Trello_GC {
 		driver.navigate().to("https://trello.com/login");
 	}
 			//Este Test es Para Iniciar Sesion Correctamente 
-			@Test(priority = 1) 	
-			public void IniciarSesion() { 
-			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-			test = extent.startTest("Login correcto en la aplicacion de Trello","Caso de Prueba 1");
-			test.log(LogStatus.INFO,"Prueba Login Correcto");		
-			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
-			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-			login.assertLoginCorrecto(); 
-		    login.CerrarSesion(subDir);		
-			}
-	
-//			//Este Test es Para Iniciar Sesion Incorrecto Con Campos Vacios
 //			@Test(priority = 1) 	
-//			public void IniciarSesionIncorrecto() { 
+//			public void IniciarSesion() { 
 //			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Assert de Acceso Pagina Principal Incorrecto","Prueba Ingreso Incorrecto");
-//			test.log(LogStatus.INFO,"Prueba Ingreso a Login Con Campos Vacios");		
+//			test = extent.startTest("Login correcto en la aplicacion de Trello","Caso de Prueba 1");
+//			test.log(LogStatus.INFO,"Prueba Login Correcto");		
 //			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
-//			login.LoginUsuario("", "", subDir); 
-//			login.assertLoginCampoBlanco();
+//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
+//			login.assertLoginCorrecto(); 
+//		    login.CerrarSesion(subDir);		
 //			}
+	
+			//Este Test es Para Iniciar Sesion Incorrecto Con Campos Vacios
+			@Test(priority = 1) 	
+			public void IniciarSesionIncorrecto() { 
+			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
+			test = extent.startTest("Login incorrecto en la aplicación Trello","Caso de Prueba 2");
+			test.log(LogStatus.INFO,"Prueba Login Incorrecto");		
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
+			login.LoginUsuario("", "", subDir); 
+			login.assertLoginiNCorrecto();
+			}
 //
 //			// Este Test Es Para Crear Tablero
 //			@Test(priority = 2) 
