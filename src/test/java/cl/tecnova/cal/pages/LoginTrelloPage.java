@@ -32,8 +32,6 @@ import cl.tecnova.cal.helpers.Helper;
 	
 
 	private By validacionloginincorecto;
-	private By campoenblanco;
-	private By validaciontablerocreado;
 	private By validaicontarjeta;
 
 	
@@ -48,7 +46,6 @@ import cl.tecnova.cal.helpers.Helper;
 	this.iniciarsesion = By.id("login"); 
 	this.validacionlogin = By.xpath("//*[@id=\"content\"]/div/div[2]/div/div/div/div/div[2]/div/div/div/div/h3"); //Tableros personales
 	this.validacionloginincorecto = By.xpath("//p[@class='error-message']"); //Tableros personales
-	this.campoenblanco = By.xpath("//p[@class='error-message']");
 
 	
 	
@@ -57,8 +54,6 @@ import cl.tecnova.cal.helpers.Helper;
 	
 	//de aqui pa aca metemos las varibales que usamos para validar 
 	
-	this.campoenblanco = By.xpath("//p[@class='error-message']");
-	this.validaciontablerocreado = By.xpath("//span[contains(.,'Tablero de Jose de Prueba')]");
 	this.validaicontarjeta = By.xpath("//span[@class='js-add-a-card'][contains(.,'Añada una tarjeta')]");
 
 	
@@ -90,10 +85,7 @@ import cl.tecnova.cal.helpers.Helper;
 	Assert.assertTrue(driver.findElement(validacionloginincorecto).getText().equals("Contraseña no válida"));
 	}
 	
-	public void assertCrearTableroValidacion() { //metodo para validar ingreso correcto      //#Paso 5 	
-	Assert.assertTrue(driver.findElement(validaciontablerocreado).getText().equals("Tablero de Jose de Prueba"));
-
-	}
+	
 	
 	public void assertAgregarNuevaTarjetaValidacion() { //metodo para validar ingreso correcto      //#Paso 5 	
 	Assert.assertTrue(driver.findElement(validaicontarjeta).getText().equals("Añada una tarjeta"));

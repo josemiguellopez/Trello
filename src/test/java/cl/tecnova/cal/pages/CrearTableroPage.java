@@ -5,6 +5,7 @@ package cl.tecnova.cal.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -24,17 +25,26 @@ public class CrearTableroPage {
 	private By agregartitulo;
 	private By creartablero;
 	
+	//Asserts
+	private By validaciontablerocreado;
+
+	
 	
 	//Construcctor
-			public CrearTableroPage(WebDriver driver, ExtentTest test, Boolean TAKE_SS) {
+	public CrearTableroPage(WebDriver driver, ExtentTest test, Boolean TAKE_SS) {
 				
-				this.driver = driver; 	//Esto Siempre va ser igual para todo
-				this.test = test;
-				this.TAKE_SS = TAKE_SS;
-				this.clickcrearuntablero = By.xpath("//div[@class='board-tile mod-add']");
-				this.agregartitulo = By.xpath("//*[@id=\"chrome-container\"]/div[3]/div/div/div/form/div/div/div[1]/input");
-				this.creartablero = By.xpath("//*[@id=\"chrome-container\"]/div[3]/div/div/div/form/button");
-						}
+	this.driver = driver; 	//Esto Siempre va ser igual para todo
+	this.test = test;
+	this.TAKE_SS = TAKE_SS;
+	this.clickcrearuntablero = By.xpath("//div[@class='board-tile mod-add']");
+	this.agregartitulo = By.xpath("//*[@id=\"chrome-container\"]/div[3]/div/div/div/form/div/div/div[1]/input");
+	this.creartablero = By.xpath("//*[@id=\"chrome-container\"]/div[3]/div/div/div/form/button");
+	//Constructor_Assert
+	this.validaciontablerocreado = By.xpath("//span[contains(.,'Tablero de Jose de Prueba')]");
+
+	
+	
+	}
 	public void CrearTablero(String subDir){
 		driver.findElement(clickcrearuntablero).click();
 		Helper.waitSeconds(1);
@@ -46,4 +56,19 @@ public class CrearTableroPage {
 		Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Tablero Creado ", subDir, "NuevoTableritoCreado");		
 		Helper.waitSeconds(4);
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void assertCrearTableroValidacion() { //metodo para validar ingreso correcto      //#Paso 5 	
+		Assert.assertTrue(driver.findElement(validaciontablerocreado).getText().equals("Tablero de Jose de Pruebaaaa"));
+
+		}
 }

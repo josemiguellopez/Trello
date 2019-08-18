@@ -71,6 +71,7 @@ public class Test_Login_Trello_GC {
 			login.assertLoginCorrecto();
 			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
 			CrearTablero.CrearTablero(subDir);
+			CrearTablero.assertCrearTableroValidacion();
 			login.CerrarSesion(subDir);
 			}
 //			
