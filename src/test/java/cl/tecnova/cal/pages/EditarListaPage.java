@@ -30,7 +30,7 @@ public class EditarListaPage {
 		private  By cerraretiqueta;
 		private By vencimiento;
 		private By campofecha;
-		private By campohora;
+		//private By campohora;
 		private By guardar;
 		private By agregarcomentario;
 		private By adjunto;
@@ -53,14 +53,14 @@ public class EditarListaPage {
 					this.test = test;
 					this.TAKE_SS = TAKE_SS;
 					this.clickpruebaautomatizada = By.xpath("//*[@id=\"board\"]/div[1]/div/div[2]/a[1]");
-					this.clickdescripcion = By.xpath("//a[contains(.,'Añadir una descripción más detallada...')]");
+					this.clickdescripcion = By.xpath("//textarea[contains(@placeholder,'Añadir una descripción más detallada...')]");
 					this.descripcion = By.xpath("//textarea[@placeholder='Añadir una descripción más detallada...']");
 					this.etiqueta = By.xpath("//span[contains(.,'Etiquetas')]");
 					this.coloretiqueta = By.xpath("//span[@data-color='green']");
 					this.cerraretiqueta = By.xpath("//a[@class='pop-over-header-close-btn icon-sm icon-close']");
 					this.vencimiento = By.xpath("//a[contains(.,'Vencimiento')]");
 					this.campofecha = By.xpath("//input[@tabindex='101']");
-					this.campohora = By.xpath("//input[@placeholder='Introducir la hora']");
+					//this.campohora = By.xpath("//input[@placeholder='Introducir la hora']");
 					this.guardar = By.xpath("//input[@tabindex='103']");
 					this.agregarcomentario = By.xpath("//textarea[@placeholder='Escriba un comentario...']");
 					this.adjunto = By.xpath("//a[@title='Adjunto']");
@@ -86,7 +86,7 @@ public class EditarListaPage {
 
 					}
 		public void Descripcion(String subDir) {
-			Helper.waitSeconds(1);
+			Helper.waitSeconds(2);
 			driver.findElement(clickdescripcion).click();
 			Helper.waitSeconds(1);
 			driver.findElement(descripcion).sendKeys("Hola soy una descripcion automatizada");
