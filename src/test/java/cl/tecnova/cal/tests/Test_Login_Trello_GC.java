@@ -48,30 +48,31 @@ public class Test_Login_Trello_GC {
 //			login.assertLoginCorrecto(); 
 //		    login.CerrarSesion(subDir);		
 //			}
-	
-			//Este Test es Para Iniciar Sesion Incorrecto Con Campos Vacios
-			@Test(priority = 1) 	
-			public void IniciarSesionIncorrecto() { 
-			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-			test = extent.startTest("Login incorrecto en la aplicación Trello","Caso de Prueba 2");
-			test.log(LogStatus.INFO,"Prueba Login Incorrecto");		
-			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
-			login.LoginUsuario("testing.qa.tecnova@gmail.com", "LoginIncorrecto", subDir); 
-			login.assertLoginiNCorrecto();
-			}
-//
-//			// Este Test Es Para Crear Tablero
-//			@Test(priority = 2) 
-//			public void CrearTabero() { 
+//	
+//			//Este Test es Para Iniciar Sesion Incorrecto Con Campos Vacios
+//			@Test(priority = 1) 	
+//			public void IniciarSesionIncorrecto() { 
 //			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
-//			test = extent.startTest("Crear Tablero ","Prueba De Crear Tablero");
-//			test.log(LogStatus.INFO,"Prueba Tablero Correcto");		
+//			test = extent.startTest("Login incorrecto en la aplicacion Trello","Caso de Prueba 2");
+//			test.log(LogStatus.INFO,"Prueba Login Incorrecto");		
 //			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
-//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
-//			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
-//			CrearTablero.CrearTablero(subDir);
-//			login.CerrarSesion(subDir);
+//			login.LoginUsuario("testing.qa.tecnova@gmail.com", "LoginIncorrecto", subDir); 
+//			login.assertLoginiNCorrecto();
 //			}
+
+			// Este Test Es Para Crear Tablero
+			@Test(priority = 2) 
+			public void CrearTabero() { 
+			String subDir = SUBDIR + Thread.currentThread().getStackTrace()[1].getMethodName();
+			test = extent.startTest("Crear Tablero ","Prueba De Crear Tablero");
+			test.log(LogStatus.INFO,"Prueba Tablero Correcto");		
+			LoginTrelloPage login = new LoginTrelloPage(driver, test, TAKE_SS); 	
+			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir);
+			login.assertLoginCorrecto();
+			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
+			CrearTablero.CrearTablero(subDir);
+			login.CerrarSesion(subDir);
+			}
 //			
 //			//Este Test Para Abrir Tablero
 //			@Test(priority = 3) 	
