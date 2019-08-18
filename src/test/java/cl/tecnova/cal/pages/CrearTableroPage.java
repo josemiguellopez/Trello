@@ -41,7 +41,6 @@ public class CrearTableroPage {
 		driver.findElement(agregartitulo).sendKeys("Tablero de Jose de Prueba");
 		Helper.waitSeconds(2);
 		driver.findElement(creartablero).click();
-		Helper.waitSeconds(1);
 		Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Agregar Nombre Tablero ", subDir, "NuevoTableritoNombre");	
 		Helper.waitSeconds(3);
 		Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Tablero Creado ", subDir, "NuevoTableritoCreado");		
