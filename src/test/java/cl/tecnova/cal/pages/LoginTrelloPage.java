@@ -45,16 +45,12 @@ import cl.tecnova.cal.helpers.Helper;
 	this.iniciarsesion = By.id("login"); 
 	this.validacionlogin = By.xpath("//*[@id=\"content\"]/div/div[2]/div/div/div/div/div[2]/div/div/div/div/h3"); //Tableros personales
 	this.validacionloginincorecto = By.xpath("//p[@class='error-message']"); //Tableros personales
-
-	
 	
 	this.botonperfil = By.xpath("//span[contains(.,'TQAT')]");
 	this.botoncerrarsesion = By.xpath("//span[contains(.,'Cerrar sesión')]");
 	
 	//de aqui pa aca metemos las varibales que usamos para validar 
-	
 
-	
 	}
 
 	//Metodo Login "Es la suma de todo" aqui vamos a interactuar (le mandamos los datos de los campos )    //#Paso 3 

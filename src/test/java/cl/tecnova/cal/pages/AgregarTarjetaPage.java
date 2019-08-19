@@ -36,8 +36,6 @@ public class AgregarTarjetaPage {
 			
 			//Assert
 			private By validaicontarjeta;
-
-			
 	
 			public AgregarTarjetaPage(WebDriver driver, ExtentTest test, Boolean TAKE_SS) {
 				
@@ -48,7 +46,6 @@ public class AgregarTarjetaPage {
 			//Constructor Para Abrir Tablero
 
 			this.abrirTablero = By.partialLinkText("Tablero de Jose de Prueba");
-
 					
 			//Construcctor para Agregar Tarjeta
 
@@ -63,7 +60,6 @@ public class AgregarTarjetaPage {
 			
 			//Assert
 			this.validaicontarjeta = By.xpath("//span[contains(.,'Añada una lista')]");
-
 									
 			}	
 			
@@ -89,7 +85,8 @@ public class AgregarTarjetaPage {
 			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Agregar Tarjeta Lista de Prueba", subDir, "AgregarTarjetaListaPrueba");
 
 			}
-			
+			//Metodo Para Agregar Prueba Automatizada
+
 			public void AgregarTarjetaPruebaAutomatizada(String subDir) {
 			driver.findElement(agregartarjeta).click();
 			driver.findElement(titulodetarjeta).sendKeys("Prueba Automatizada");
@@ -98,7 +95,8 @@ public class AgregarTarjetaPage {
 			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Agregar Tarjeta Prueba Automatizada", subDir, "AgregarTarjetaListaPruebaAutomatizada");
 			Helper.waitSeconds(2);
 			}
-			
+			//Metodo Para Agregar Tarjeta Proceso
+
 			public void AgregarTablaProceso(String subDir) {
 			driver.findElement(titulootratarjeta).sendKeys("Proceso");
 			driver.findElement(botonagregarotro).click();			

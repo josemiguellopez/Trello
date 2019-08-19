@@ -112,8 +112,6 @@ public class Test_Login_Trello_GC {
 			login.CerrarSesion(subDir);
 			}
 			
-
-				
 			// Este Test Para Validacion de Edicion Tablero Creado Correcto
 			@Test(priority = 5) 	
 			public void EditarListaDePrueba() { 
@@ -160,13 +158,13 @@ public class Test_Login_Trello_GC {
 			//Crear Clase Editar Lista
 			EditarListaPage EditarLista = new EditarListaPage(driver, test, TAKE_SS);
 			//Ingreso a Tabla Prueba Automatizada
-			EditarLista.TarjetaPruebaAutomatizada(subDir);
-			
+			EditarLista.TarjetaPruebaAutomatizada(subDir);			
 			//Mover Tarjeta
 			EditarLista.MoverTarjeta(subDir);
 			//Cerrar Sesion
 			login.CerrarSesion(subDir);
-				}
+			}
+			
 			// Este Test Para Eliminar Tablero
 			@Test(priority = 7) 	
 			public void CerrarTablero() { 
@@ -177,15 +175,13 @@ public class Test_Login_Trello_GC {
 			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir); 
 			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);			
 			//Accion Abrir Tablero
-			AgregarTarjeta.abrirTablero(subDir);
-			
+			AgregarTarjeta.abrirTablero(subDir);			
 			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
 			//Eliminar Tablero
-			CrearTablero.EliminarTablero(subDir);
-			
-			
+			CrearTablero.EliminarTablero(subDir);	
+			//Cerrar Sesion
 			login.CerrarSesion(subDir);
-				}
+			}
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
