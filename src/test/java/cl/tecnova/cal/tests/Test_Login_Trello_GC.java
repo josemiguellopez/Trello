@@ -77,12 +77,11 @@ public class Test_Login_Trello_GC {
 			login.LoginUsuario("testing.qa.tecnova@gmail.com", "087654321", subDir);
 			//Assert Inicio de Sesion
 			login.assertLoginCorrecto();
-			//Crear Clase Tablero
-			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
-			//Crear Tablero
-			CrearTablero.CrearTablero(subDir);
+			//Crear Clase Crear Tablero
+			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);				//Crear Tablero
+			AgregarTarjeta.CrearTablero(subDir);
 			//Assert Tablero Creado
-			CrearTablero.assertCrearTableroValidacion();
+			AgregarTarjeta.assertCrearTableroValidacion();
 			//Cerrar Sesion
 			login.CerrarSesion(subDir);
 			}
@@ -176,9 +175,8 @@ public class Test_Login_Trello_GC {
 			AgregarTarjetaPage AgregarTarjeta = new AgregarTarjetaPage(driver, test, TAKE_SS);			
 			//Accion Abrir Tablero
 			AgregarTarjeta.abrirTablero(subDir);			
-			CrearTableroPage CrearTablero = new CrearTableroPage (driver, test, TAKE_SS); 
 			//Eliminar Tablero
-			CrearTablero.EliminarTablero(subDir);	
+			AgregarTarjeta.EliminarTablero(subDir);	
 			//Cerrar Sesion
 			login.CerrarSesion(subDir);
 			}
