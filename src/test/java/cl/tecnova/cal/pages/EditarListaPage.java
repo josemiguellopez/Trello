@@ -3,6 +3,10 @@
  */
 package cl.tecnova.cal.pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -66,7 +70,7 @@ public class EditarListaPage {
 					this.adjunto = By.xpath("//a[@title='Adjunto']");
 					this.txtadjunto = By.xpath("//input[@placeholder='Pegue un vínculo aquí...']");
 					this.adjuntar = By.xpath("//input[@value='Adjuntar']");
-					this.guardarprueba = By.xpath("//input[contains(@class,'primary confirm mod-no-top-bottom-margin js-add-comment')]");
+					this.guardarprueba = By.xpath("//input[@value='Guardar']");
 					this.cerrar = By.xpath("//*[@id=\"chrome-container\"]/div[3]/div/div/a");
 
 					this.mover = By.xpath("//span[contains(.,'Mover')]");
@@ -132,14 +136,37 @@ public class EditarListaPage {
 							
 		public void Comentarios(String subDir){
 			
-			
 			driver.findElement(agregarcomentario).sendKeys("Hola, Soy un comentario automatizado ;)");
 			Helper.waitSeconds(1);
-			driver.findElement(guardarprueba).click();
+			
+			// EL Robot lo uso para simular teclado Tabulador, debido a que Trello actualizo la iamgen y el boton guardar queda debajo un frame imposible de hacer click 
+			
+			
+			Robot robotObj;
+            try {
+                           
+                           // Get Robot Object.
+                           robotObj = new Robot();
+                           robotObj.keyPress(KeyEvent.VK_TAB);
+                           Helper.waitSeconds(2);
+                           robotObj.keyPress(KeyEvent.VK_ENTER);
+                           Helper.waitSeconds(2);
+                           robotObj.keyRelease(KeyEvent.VK_ENTER);
+                           Helper.waitSeconds(2);
+            
+            } catch (AWTException e) {
+                           // TODO Auto-generated catch block
+                           e.printStackTrace();
+            }
+
+			//driver.findElement(guardarprueba).click();   cuando se acomode interfaz se puede eliminar robot y usar click
+
+			
+			
+			
 			Helper.addEvidence(TAKE_SS, driver, test, "Pantalla de Editar Tarjeta", subDir, "EditarTarjetaCoemntarios");
 			Helper.waitSeconds(1);
 			driver.findElement(cerrar).click();
-
 			
 		}
 
